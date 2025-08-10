@@ -106,7 +106,7 @@ body {
 
 .product-detail {
   max-width: 1000px;
-  width: 90%; /* або 100% */
+  width: 80%; /* або 100% */
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
@@ -117,21 +117,7 @@ body {
   color: #333;
 }
 
-/* Додати адаптив */
-@media (max-width: 600px) {
-  .product-detail {
-    max-width: 100%;
-    width: 80%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-  .product-detail h2, .product-detail h4 {
-    font-size: 22px;
-  }
-  .product-detail p {
-    font-size: 14px;
-  }
-}
+
 
 
 .product-detail h2, h4 {
