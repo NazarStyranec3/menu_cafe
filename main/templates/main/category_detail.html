@@ -1,0 +1,45 @@
+{% extends 'main/dad.html' %}
+{% block body %}
+
+
+{% if subcategories %}
+  <div class="tile-container">
+    {% for sub in subcategories %}
+      <a href="{% url 'category_detail' sub.id %}">
+        <div class="tile">
+          {% if sub.image %}
+            <img src="{{ sub.image.url }}" alt="{{ sub.name }}">
+          {% endif %}
+          <h3>{{ sub.name }}</h3>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if products %}
+
+  <div class="tile-container">
+    {% for product in products %}
+      <a href="{% url 'product_detail' category.id product.id %}">
+        <div class="tile">
+          {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+          {% endif %}
+          <h3>{{ product.name }}</h3>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+{% endif %}
+
+{% if not subcategories and not products %}
+    <div class="tile-container">
+        <div class="tile">
+        <img src="/media/emoticon/sad_emoticon.jpg" alt="sad emoticon">
+        <h3>ой вибачте тут пусто</h3>
+        </div>
+  </div>
+{% endif %}
+{% endblock %}

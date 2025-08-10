@@ -1,0 +1,20 @@
+{% extends 'main/dad.html' %}
+{% block body %}
+
+<div class="product-detail">
+  {% if product.image %}
+    <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 300px;">
+  {% endif %}
+
+  {% if product.description %}
+  <h4>Опис:</h4>
+  <p>{{ product.description|linebreaks }}</p>
+  {% endif %}
+  {% if product.composition %}
+  <h2>Склад:</h2>
+  <p>{{ product.composition|linebreaks  }}</p>
+  {% endif %}
+
+</div>
+
+{% endblock %}
