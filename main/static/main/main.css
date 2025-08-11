@@ -120,9 +120,6 @@ body {
 
 /* Додати адаптив */
 @media (max-width: 600px) {
-  body {
-    align-items: flex-start;
-  }
   .product-detail {
     margin: 100px auto 20px;
   }
