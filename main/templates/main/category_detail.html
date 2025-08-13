@@ -5,7 +5,11 @@
 {% if subcategories %}
   <div class="tile-container">
     {% for sub in subcategories %}
-      <a href="{% url 'category_detail' sub.id %}">
+      {% if lviv %}
+        <a href="{% url 'lviv_category_detail' sub.id %}">
+      {% else %}
+        <a href="{% url 'category_detail' sub.id %}">
+      {%endif%}
         <div class="tile">
           {% if sub.image %}
             <img src="{{ sub.image.url }}" alt="{{ sub.name }}">
@@ -21,12 +25,22 @@
 
   <div class="tile-container">
     {% for product in products %}
-      <a href="{% url 'product_detail' category.id product.id %}">
+      {% if lviv %}
+        <a href="{% url 'lviv_product_detail' category.id product.id %}">
+      {% else %}
+        <a href="{% url 'product_detail' category.id product.id %}">
+      {%endif%}
+
         <div class="tile">
           {% if product.image %}
             <img src="{{ product.image.url }}" alt="{{ product.name }}">
           {% endif %}
           <h3>{{ product.name }}</h3>
+          {% if lviv %}
+            <h3 class="price">{{ product.lviv_price }} ₴</h3>
+          {% else %}
+            <h3 class="price">{{ product.price}} ₴</h3>
+          {%endif%}
         </div>
       </a>
     {% endfor %}

@@ -32,6 +32,10 @@ body {
   flex-direction: column;
 }
 
+h3.price, h2.price  {
+    text-align: right;
+    color:#d0e8d0;
+}
 
 .tile-container {
   display: flex;
@@ -42,7 +46,6 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-
   min-height: 100vh; /* або height: 100vh */
 }
 
@@ -177,4 +180,8 @@ body {
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+}
+h3.price, h2.price  {
+    text-align: right;
+    color: #4caf50; /* Hex */
 }

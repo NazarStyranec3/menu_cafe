@@ -2,7 +2,11 @@
 {% block body %}
 <div class="tile-container">
   {% for category in categories %}
+  {% if lviv %}
+    <a href="{% url 'lviv_category_detail' category.id %}">
+  {% else %}
     <a href="{% url 'category_detail' category.id %}">
+  {%endif%}
       <div class="tile">
         {% if category.image %}
           <img src="{{ category.image.url }}" alt="{{ category.name }}">
