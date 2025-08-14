@@ -83,12 +83,13 @@ WSGI_APPLICATION = 'Cofe_Menu.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-        'USER': 'myuser',
-        'PASSWORD': 'mypassword',
+        'NAME': 'menu_cafe',
+        'USER': 'postgres',
+        'PASSWORD': '050903',
         'HOST': 'localhost',
         'PORT': '5432',
     }
