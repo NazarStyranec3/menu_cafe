@@ -84,16 +84,28 @@ WSGI_APPLICATION = 'Cofe_Menu.wsgi.application'
 # }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'menu_cafe',
+#         'USER': 'postgres',
+#         'PASSWORD': '050903',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'menu_cafe',
-        'USER': 'postgres',
+        'USER': 'menu_user',
         'PASSWORD': '050903',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
