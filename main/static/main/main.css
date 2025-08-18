@@ -112,7 +112,6 @@ h3.price, h2.price  {
   color: #333;
 }
 
-
 /* Додати адаптив */
 @media (max-width: 600px) {
   .product-detail {
