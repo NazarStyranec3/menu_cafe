@@ -184,6 +184,11 @@ h3.price, h2.price  {
   padding-left: 0;
   padding-right: 0;
 }
+.product-detail h3,
+.product-detail h3.price {
+    text-align: center;
+}
+
 h3.price, h2.price  {
     text-align: right;
     color: #4caf50; /* Hex */
