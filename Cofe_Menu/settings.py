@@ -162,4 +162,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'main', 'media')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-#
+CSRF_TRUSTED_ORIGINS = [
+    'http://filetransfer.pp.ua',
+    'http://www.filetransfer.pp.ua',
+    'https://filetransfer.pp.ua',
+    'https://www.filetransfer.pp.ua',
+    'http://filetransfer.pp.ua.',
+    'http://www.filetransfer.pp.ua.',
+    'https://filetransfer.pp.ua.',
+    'https://www.filetransfer.pp.ua.',
+]
