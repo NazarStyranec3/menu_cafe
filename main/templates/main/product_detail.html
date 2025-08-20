@@ -16,13 +16,12 @@
   {% if product.composition %}
   <h4>Склад:</h4>
   <p>{{ product.composition|linebreaks  }}</p>
-
+  {% endif %}
   {% if lviv %}
     <h2 class="price" > {{ product.lviv_price }} ₴</h2>
   {% else %}
     <h2 class="price" > {{ product.price}} ₴</h2>
   {%endif%}
-  {% endif %}
 
 </div>
 
